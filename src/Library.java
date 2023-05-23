@@ -94,20 +94,4 @@ public class Library {
             user.getBooksOnLoan().remove(book);
         }
     }
-
-//    @FunctionalInterface
-//
-//    public void processBooks(Consumer<Book> action) {
-//        for (Book book : books) {
-//            action.accept(book);
-//        }
-//    }
-//
-//    public void displayBooks() {
-//        processBooks((Book -> System.out.println(book.getTitle())));
-//    }
-//
-//    public void updatedCategories() {
-//        processBooks(Book ->book.getCategory(book.getCategory().toUpperCase()));
-//    }
 }

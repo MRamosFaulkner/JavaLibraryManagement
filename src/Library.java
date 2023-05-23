@@ -34,16 +34,16 @@ public class Library {
     }
 
     //Finds all books in a specific year
-    public List<Book> booksByYear(int publicationYear) {
+    public List<Book> booksByYear(int year) {
         return books.stream()
-                .filter(book -> book.getPublicationYear() == (publicationYear))
+                .filter(book -> book.getPublicationYear() == year)
                 .collect(Collectors.toList());
     }
 
     //Finds all books by author
     public List<Book> booksByAuthor (String author) {
         return books.stream()
-                .filter(book -> book.getAuthor() == (booksByAuthor()))
+                .filter(book -> book.getAuthor() .equals(author))
                 .collect(Collectors.toList());
     }
 
@@ -56,8 +56,8 @@ public class Library {
 
     //Finds books with more than "n" pages
     public List<Book> booksWithNPage(int pageCount) {
-        return books.stream();
-        filter(book -> book.getPages() > pageCount)
+        return books.stream()
+        .filter(book -> book.getPages() > pageCount)
         .collect(Collectors.toList());
     }
 
@@ -95,19 +95,19 @@ public class Library {
         }
     }
 
-    @FunctionalInterface
-
-    public void processBooks(Consumer<Book> action) {
-        for (Book book : books) {
-            action.accept(book);
-        }
-    }
-
-    public void displayBooks() {
-        processBooks((Book -> System.out.println(book.getTitle())));
-    }
-
-    public void updatedCategories() {
-        processBooks(Book ->book.getCategory(book.getCategory().toUpperCase()));
-    }
+//    @FunctionalInterface
+//
+//    public void processBooks(Consumer<Book> action) {
+//        for (Book book : books) {
+//            action.accept(book);
+//        }
+//    }
+//
+//    public void displayBooks() {
+//        processBooks((Book -> System.out.println(book.getTitle())));
+//    }
+//
+//    public void updatedCategories() {
+//        processBooks(Book ->book.getCategory(book.getCategory().toUpperCase()));
+//    }
 }

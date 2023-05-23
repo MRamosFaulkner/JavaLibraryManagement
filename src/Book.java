@@ -58,7 +58,7 @@ public class Book {
         return isOnLoan;
     }
 
-    public void setisOnLoan(boolean onLoan) {
-        isOnLoan = onLoan;
+    public void setisOnLoan(boolean isOnLoan) {
+        isOnLoan = isOnLoan;
     }
 }
